@@ -1,0 +1,31 @@
+.body{margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    background: white;
+}
+
+.chamada {font-size: 150%;
+    font-palette: dark;
+}
+
+.center-options{font-size: 16px;
+    font-family: Georgia, serif;
+    margin-right: 35px;
+    border:2px solid red;
+    border-radius: 5px;
+    background-color: red;
+
+
+}
+
+.midias-sociais{color: black;
+    padding-top: 60px;
+
+}
+
+.footer{color: black;
+    font-style: oblique;
+    margin-top: auto;
+
+
+}
