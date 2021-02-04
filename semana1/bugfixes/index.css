@@ -27,7 +27,7 @@ button:focus {
 }
 
 img {
-    width: 100px;
+    width: 70px;
 }
 
 div>p:first-of-type {
@@ -35,7 +35,7 @@ div>p:first-of-type {
 }
 
 div img {
-    background: black;
+    background: white;
 }
 #bora{position: relative;
     left: 130px;
