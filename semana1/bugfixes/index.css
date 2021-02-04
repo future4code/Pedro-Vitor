@@ -37,7 +37,10 @@ div>p:first-of-type {
 div img {
     background: black;
 }
+#bora{position: relative;
+    left: 130px;
 
+}
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
@@ -102,6 +105,8 @@ div:last-child {
 
 table {
     width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td button {
