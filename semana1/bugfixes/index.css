@@ -22,7 +22,7 @@ input {
     width: 500px;
 }
 
-button:focus {
+button:focus{
     color: white;
 }
 
@@ -114,6 +114,10 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+button:hover{
+    transition-duration: 0.2s;
+    background-color: #ffaf43;
 }
 
 .container-do-search {
