@@ -1,0 +1,40 @@
+*{box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+}
+/****** HEADER CUSTOMIZATION ******/
+.top-box{color: white;
+    padding: 40px;
+}
+.top-box h1{font-family:"Bebas Neue", cursive;
+}
+.top-box p{font-size: 18px;
+}
+
+/* Nav bar */
+.nav {font-family: "Bebas Neue", cursive;
+    font-size: 35px;
+    text-align: center;
+    padding: 30px;
+
+}
+.nav a:link{color: lightgrey;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    transition-duration: 0.8s;
+    background-color: dimgrey;
+    padding: 10px 30px;
+    max-width: 80%;
+}
+
+.nav a:active {
+    background-color: dimgrey;
+}
+
+.nav a:visited {color: lightgrey;
+}
