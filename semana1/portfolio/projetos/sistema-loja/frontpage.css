@@ -1,0 +1,48 @@
+*{margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Century Gothic, serif;
+}
+.chamada{
+    font-size: 30px;
+    color: darkorange;
+}
+
+a{border-style: solid;
+    background: lightgrey;
+    border-radius: 60px;
+    border-color: lightgrey;
+    -webkit-border-radius: 10px;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.midias-sociais{color: black;
+    padding-top: 60px;
+}
+
+.footer{background-color: #F1F1F1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+table{margin-left: auto;
+    margin-right: auto;
+
+}
+table, th, td{
+    margin-top: 30px;
+    background-color: white;
+    border-style: wave;
+}
+.opcao-marcar{margin-top: 10px;
+    color: red;
+}
+
+.selecionar{border-style: solid;
+    background-color: lightgrey;
+}
