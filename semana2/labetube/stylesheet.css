@@ -1,51 +1,62 @@
-*{margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: roboto, sans-serif;
+
 }
+
 /* HEADER */
-header{
-    display:flex;
-    align-items:center;
+header {
+    display: flex;
+    align-items: center;
     padding: 0 20px;
     background-color: lightsalmon;
     justify-content: space-between;
-
 }
-.icone-name{display:flex;
+
+.icone-name {
+    display: flex;
     justify-content: left;
-    align-items:center;
+    align-items: center;
+}
 
+.labe-icone {
+    display: flex;
+    text-align: center;
+    width: 20%;
 }
-.labe-icone{
-    display:flex;
-    text-align:center;
-    width:20%;
-}
-#search-bar{display:flex;
-    text-align:right;
+
+#search-bar {
+    display: flex;
+    text-align: right;
     padding: 10px;
 }
 
 /* MAIN CONTENT */
-.main-container{
-    display:grid;
+.main-container {
+    display: grid;
     grid-gap: 2px;
     background-color: yellow;
 }
-.card{
+
+.card {
     padding: 30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    width: 80%;
 }
+
 video {
     width: 300px;
 }
-.card {
-    position: relative;
-}
+
+/* CRÉDITOS EDUARDO TURMA CRUZ */
 a {
     position: absolute;
     top: 0;
@@ -53,19 +64,25 @@ a {
     width: 100%;
     height: 100%;
 }
-a:hover{
+
+a:hover {
     cursor: pointer;
 }
-section{
-    display:grid;
+
+/* CRÉDITOS EDU, TURMA CRUZ */
+section {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    line-height: 3;
 }
-#video-1{
-}
+
 /* FOOTER */
-footer{display:flex;
-    flex-grow: 1;
+footer {
+    display: flex;
+    grid-column: 1/3;
+    flex-direction: column;
     background-color: lightsalmon;
     justify-content: center;
-    height: 86px;
+    align-items: center;
+    line-height: 55px;
 }
