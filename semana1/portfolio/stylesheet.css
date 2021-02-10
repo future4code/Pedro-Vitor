@@ -1,0 +1,146 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+}
+
+/****** HEADER CUSTOMIZATION ******/
+.top-box {
+    color: white;
+    padding: 40px;
+}
+
+.top-box h1 {
+    font-family: "Bebas Neue", cursive;
+}
+
+.top-box p {
+    font-size: 18px;
+}
+
+p {
+    color: lightgrey;
+}
+
+/****** NAV CUSTOMIZATION ******/
+.nav {
+    font-family: "Bebas Neue", cursive;
+    font-size: 35px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.nav a:link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    transition-duration: 0.8s;
+    background-color: #272727;
+    padding: 10px 30px;
+    max-width: 80%;
+}
+
+.nav a:active {
+    background-color: dimgrey;
+}
+
+.nav a:visited {
+    color: white;
+}
+
+/****** SECTION CUSTOMIZATION ******/
+/* HOMEPAGE */
+section {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: "Bebas", monospace;
+    color: whitesmoke;
+}
+
+/* SOBRE MIM */
+section #main {
+    box-sizing: border-box;
+}
+
+.column-left {
+    float: left;
+    width: 33.333%;
+}
+
+.column-right {
+    float: right;
+    width: 33.333%;
+}
+
+.column-middle {
+    display: inline-block;
+    width: 33.333%;
+}
+
+#main {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* PROJETOS */
+
+/* CONTATO */
+label {
+    color: white;
+    display: block;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+}
+
+input[type=text], select {
+    display: inline-block;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    display: inline-block;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+#name, #email {
+    color: white;
+    padding: 6px;
+    width: 300px;
+    border-radius: 3px;
+}
+
+#mensagem {
+    border-color: lightgrey;
+    color: white;
+    width: 300px;
+    padding: 0 0 115px;
+    border-radius: 3px;
+    white-space: pre-line;
+}
+
+input[type=submit] {
+    color: white;
+    padding: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+/****** FOOTER CUSTOMIZATION ******/
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: "Bebas Neue", cursive;
+    color: white
+}
