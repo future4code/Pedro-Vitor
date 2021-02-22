@@ -1,0 +1,49 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+    /* celulares */
+    }
+    
+#first-block {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+}
+
+div {border: 1px solid black;
+}
+
+#main-container {
+}
+
+#main-container > div{
+    text-align: center;
+}
+
+.blue-block {
+    background-color: blue;
+}
+
+.yellow-block {
+    background-color: yellow;
+}
+
+.green-block {
+    background-color: green;
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+}
+
+.white-block {
+
+    background-color: white;
+}
