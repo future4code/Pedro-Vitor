@@ -13,13 +13,13 @@ export default class App extends React.Component {
 
     screenRender = () => {
         switch (this.state.page) {
-            case "1":
+            case 1:
                 return <Etapa1/>
-            case "2":
+            case 2:
                 return <Etapa2/>
-            case "3":
+            case 3:
                 return <Etapa3/>
-            case "4":
+            case 4:
                 return <Etapa4/>
             default:
                 break;
