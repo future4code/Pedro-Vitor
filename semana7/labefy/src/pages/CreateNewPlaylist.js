@@ -5,6 +5,13 @@ import axios from "axios"
 const CreatePlaylist = styled.div`
 color: green;
 `
+
+const SendButton = styled.button`
+`
+
+const InputBox = styled.input`
+`
+
 export default class CreateNewPlaylist extends React.Component {
     state = {
         inputValue: ""
@@ -42,11 +49,12 @@ export default class CreateNewPlaylist extends React.Component {
                 <h2> Create a new Playlist ! </h2>
                 <hr/>
                 <p> Playlist name</p>
-                <input
+                <InputBox
                     type="text"
                     onChange={this.inputChange}
                     value={this.state.inputValue}/>
-                <button onClick={this.createPlaylist}> Submit</button>
+
+                <SendButton onClick={this.createPlaylist}> Send </SendButton>
             </CreatePlaylist>
         )
     }

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import axios from "axios"
 import CreateNewPlaylist from "./pages/CreateNewPlaylist";
 import UserPlaylist from "./pages/UserPlaylist";
 
@@ -9,6 +8,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `
+const SwitchButton = styled.button`
+`
+
 
 export default class App extends React.Component {
     state = {
@@ -17,9 +19,9 @@ export default class App extends React.Component {
 
     changePage = () => {
         if (this.state.page === true) {
-            this.setState({page: false })
-        } else if (this.state.page !== true ) {
-            this.setState({page: true })
+            this.setState({page: false})
+        } else if (this.state.page !== true) {
+            this.setState({page: true})
         }
     }
 
@@ -36,12 +38,10 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <AppComponent>
-                    <button onClick={this.changePage}> XXXXXXX</button>
-                    {this.screenRender()}
-                </AppComponent>
-            </div>
+            <AppComponent>
+                <SwitchButton onClick={this.changePage}> Trocar de página </SwitchButton>
+                {this.screenRender()}
+            </AppComponent>
         )
     }
 }
