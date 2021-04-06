@@ -1,44 +1,45 @@
 import React from "react"
-import axios from "axios"
-
+import styled from "styled-components"
 import SignUp from "./Components/signUp/SignUp"
 import UserList from "./Components/userList/UserList"
 
+const Container = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+`
+
 export default class App extends React.Component {
     state = {
-        userList: [],
-        inputValue: ""
-    }
-    handleInputChange = (event) => {
-        this.setState({ inputValue: event.target.value})
+        page: "signUp",
     }
 
-    getUserList = () => {
-        axios.get(
-            "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-            {
-                headers: {
-                    Authorization: "pedro-vitor-cruz"
-                }
-            }
-        ).then((r) => {
-            this.setState({userList: r.data.result.list})
-        })
-            .catch((err) => {
-                console.log(err.response.data)
-            })
+    changePage = () => {
+        if (this.state.page === "userList") {
+            this.setState({page: "signUp"})
+        } else if (this.state.page === "signUp") {
+            this.setState({page: "userList"})
+        }
     }
 
-    addNewUser = () => {
-
+    renderPage = () => {
+        switch (this.state.page) {
+            case "signUp":
+                return <SignUp />
+            case "userList":
+                return <UserList />
+            default:
+                return <div> </div>
+        }
     }
-    render(){
-        return(
-            <div className="App">
-                <SignUp
-                />
-                <UserList/>
-            </div>
+
+    render() {
+        return (
+            <Container>
+                {this.renderPage()}
+                <button onClick={this.changePage}> Change page</button>
+            </Container>
         )
     }
 }
