@@ -1,13 +1,33 @@
-import React, {useState, useEffect} from "react"
-import axios from "axios"
+import React, {useState} from "react"
+import {MainPage} from "./pages/MainPage"
+import {MatchPage} from "./pages/MatchPage";
 
 const App = () => {
+    const [page, setPage] = useState(true)
 
-  return (
-      <div>
+    const screenRender = () => {
+        if (page === true) {
+            return <MainPage/>
+        } else {
+            return <MatchPage/>
+        }
+    }
 
-      </div>
-  )
+    const nextPage = () => {
+        if (page === true) {
+            setPage(false)
+        } else {
+            setPage(true)
+        }
+    }
+
+
+    return (
+        <div>
+            {screenRender()}
+            <button onClick={nextPage}> Change Page</button>
+        </div>
+    )
 }
 
 export default App
