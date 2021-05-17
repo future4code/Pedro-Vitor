@@ -1,0 +1,11 @@
+{
+  "name": "exercicio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doAnOperation": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
