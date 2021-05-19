@@ -19,7 +19,36 @@ app.get("/countries/all", (req, res) => {
         .send(filter)
 })
 
-// Endpoint 2
+//Endpoint 3
+app.get("/countries/search", (req, res) => {
+    try {
+        let result: country[] = countries
+
+        if (req.query.name) {
+            result = result.filter(country => country.name.includes(req.query.name as string))
+        }
+        if (req.query.capital) {
+            result = result.filter(country => country.capital.includes(req.query.capital as string))
+        }
+        if (req.query.continent) {
+            result = result.filter(country => country.continent.includes(req.query.continent as string))
+        }
+        if (!result.length) {
+            throw new Error("Invalid search")
+        }
+        res
+            .status(200)
+            .send(result)
+
+    } catch (error) {
+        res
+            .status(400)
+            .send({message: error.message})
+    }
+})
+
+
+//Endpoint 2
 app.get("/countries/:id", (req, res) => {
     const id = Number(req.params.id)
     const result: country | undefined = countries.find(country => country.id === id)
@@ -32,44 +61,6 @@ app.get("/countries/:id", (req, res) => {
             .send("ID not found")
     }
 
-})
-
-//Endpoint 3
-app.get("/countries/search", (req, res) => {
-    const name = req.query.name as string
-    const result = countries.filter((country) => country.name.toLowerCase().includes(name.toLowerCase()))
-
-    res
-        .status(200)
-        .send(result)
-})
-
-app.get("/countries/:id", (req, res) => {
-    try {
-        let result: country[] = countries
-        if (req.params.name) {
-            result = result.filter(country => country.name.includes(req.query.name as string))
-        }
-
-        if (req.params.capital) {
-            result = result.filter(country => country.name.includes(req.query.capital as string))
-        }
-
-        if (req.params.continent) {
-            result = result.filter(country => country.name.includes(req.query.continent as string))
-        }
-
-        if (result.length > 0) {
-            throw new Error("Results were not found.")
-        }
-        res
-            .status(200)
-
-    } catch (error) {
-        res
-            .status(400)
-            .send({message: error.message})
-    }
 })
 
 app.listen(3000, () => {
