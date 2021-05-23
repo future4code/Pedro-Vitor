@@ -47,6 +47,39 @@ app.get("/countries/search", (req, res) => {
     }
 })
 
+//Endpoint 4
+app.put("/countries/:id", (req, res) => {
+    try {
+        const countryIndex: number = countries.findIndex(
+            (country) => country.id === Number(req.params.id)
+        )
+
+        if (!req.body.name) {
+            countries[countryIndex].name = req.body.name
+        }
+
+        if (req.query.capital) {
+            countries[countryIndex].capital = req.body.capital
+        }
+
+        if (countryIndex === -1) {
+            res.status(400)
+            throw new Error("Invalid country")
+        }
+
+        if (!req.body.name && !req.body.capital) {
+            throw new Error("Invalid search")
+        }
+
+        res
+            .status(200)
+            .send("all good")
+    } catch (error) {
+        res
+            .status(400)
+            .send({message: error.message})
+    }
+})
 
 //Endpoint 2
 app.get("/countries/:id", (req, res) => {
@@ -57,7 +90,8 @@ app.get("/countries/:id", (req, res) => {
             .status(200)
             .send(result)
     } else {
-        res.status(400)
+        res
+            .status(400)
             .send("ID not found")
     }
 
